@@ -1,0 +1,168 @@
+ /* Existing Styles */
+ .galary-image-container {
+     width: 304px;
+     height: 400px;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .galary-image-thamnail {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     transition: transform 0.3s ease;
+ }
+
+ .galary-image-container:hover img {
+     transform: translate(-50%, -50%) scale(1.2);
+ }
+
+ .galary-popup-section {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 15%;
+     background-color: rgba(0, 0, 0, 0.2);
+     color: white;
+     opacity: 0;
+     transform: translateY(100%);
+     transition: transform 0.3s ease, opacity 0.3s ease;
+ }
+
+ .galary-image-container:hover .galary-popup-section {
+     opacity: 1;
+     transform: translateY(0);
+     width: 100%;
+ }
+
+ .galary-popup-section img {
+     position: absolute;
+     object-fit: contain;
+     width: 18px;
+     top: 31px;
+     left: 43%;
+ }
+
+ .galary-popup-section p {
+     position: absolute;
+     margin: 0;
+     top: 22px;
+     right: 40%;
+ }
+
+
+
+
+ /* Modal Styles */
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     justify-content: center;
+     align-items: center;
+ }
+
+ .galary-modal-content {
+     position: relative;
+     width: 80%;
+     max-width: 1000px;
+     background-color: #F1F1F1;
+     padding: 50px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+ }
+
+ .galary-close {
+     position: absolute;
+     top: 2%;
+     right: 1%;
+     color: #000;
+     background-color: #ffffff;
+     border-radius: 50%;
+     width: 12px;
+     padding: 5px;
+     
+ }
+
+ .galary-close:hover {
+     color: #ff0000;
+ }
+
+ .galary-carousel-container {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     text-align: center;
+ }
+
+ .galary-carousel-slide {
+     display: none;
+ }
+
+ .galary-carousel-slide.active {
+     display: block;
+ }
+
+ .galary-carousel-slide img {
+     width: 100%;
+ }
+
+ .prev,
+ .next {
+     position: absolute;
+     bottom: 13px;
+     color: hsla(0, 0%, 0%, 0.75);
+     background-color: #ffffff;
+     border-radius: 50%;
+     border: none;
+     font-size: 15px;
+     padding: 8px 10px;
+ }
+
+
+ .prev {
+     left: 4%;
+ }
+
+ .next {
+     right: 4%;
+ }
+
+ .galary-counter {
+    font-size: 16px;
+    font-weight: 700;
+     position: absolute;
+     bottom: 16px;
+     left: 49%;
+ }
+
+ .button-text .previous-text,
+ .next-text {
+     position: absolute;
+     bottom: 0px;
+ }
+
+ .previous-text {
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 18.75px;
+     text-align: left;
+
+     left: 7.5%;
+ }
+
+ .next-text {
+
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 18.75px;
+     right: 7.5%;
+ }

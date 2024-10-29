@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .crown-close {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      width: 2em;
+      height: 2em;
+      background-image: url("./img/close.svg");
+      background-repeat: no-repeat;
+      border: none;
+      background-color: transparent;
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .crown-close:hover {
+      opacity: .5;
+    }
+
+    .crown-modal-content .crown-big-logo {
+      margin-top: 100px;
+    }
+
+    .crown-modal {
+      height: 100%;
+      text-align: center;
+    }
+
+    .crown-modal .modal-dialog {
+      max-width: 770px;
+
+    }
+
+    .crown-modal-content h1 {
+      color: #666666;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    .crown-modal-button-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .crown-modal-button-section button {
+      display: flex;
+      width: 150px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0px;
+      background-color: #3C94E5;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 25px;
+      margin: 23px 0 100px 0;
+    }
+
+    .crown-modal-button-section button>img {
+
+      margin-right: 8px;
+    }
+  </style>
+  <title>Bootstrap Modal with Custom Close Button</title>
+</head>
+
+<body style="background-color: bisque;">
+  <div>
+    <!-- Image that triggers the modal -->
+    <img src="./img/crown-logo.svg" alt="Crown Logo" style="cursor: pointer;" data-bs-toggle="modal"
+      data-bs-target="#imageModal">
+  </div>
+
+  <!-- Modal Structure -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="crown-modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="crown-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body">
+            <div class="crown-modal-content">
+              <img class="crown-big-logo" src="./img/crown-logo.svg" alt="Crown Logo">
+              <h1>This feature is exclusive to VIP members. <br>
+                Click the button below to join our VIP community now!</h1>
+              <div class="crown-modal-button-section">
+                <button> <img src="./img/Lock Off.svg" alt="">Unlock Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (ensure the path is correct) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
